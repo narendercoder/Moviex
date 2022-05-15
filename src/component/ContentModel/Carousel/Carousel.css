@@ -1,0 +1,17 @@
+.carouselItem{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   object-fit: contain;
+   padding: 10px;
+}
+.carouselItem_img{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+.carouselItem_txt{
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: 'Assistant', sans-serif;
+}

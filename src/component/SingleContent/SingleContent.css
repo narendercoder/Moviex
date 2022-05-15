@@ -1,0 +1,44 @@
+.media{
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #10141f;
+    border-radius: 10px ;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+.media:hover{
+    background-color: rgb(255, 255, 255,0.1);
+}
+@media (max-width: 550px){
+    .media{
+        width: 46%;
+    }
+}
+.poster{
+    border-radius: 10px 0px 0px 0px;
+}
+
+.poster:hover{
+    background: #10141f;
+    transform: scale(1.05);
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    z-index: 2;
+}
+.subTitle{
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    padding: 0 2px;
+    padding-bottom: 3px;
+}
+.title:hover{
+    color: red;
+}
