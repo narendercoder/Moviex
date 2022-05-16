@@ -16,11 +16,11 @@ function App() {
     <div className='app'>
     <Container>
      <Routes>
-       <Route path='/'element={<Trending/>} />
+       <Route path='/' element={<Trending/>} />
        <Route path='/movies' element={<Movies/>} />
        <Route path='/series' element={<Series/>} />
        <Route path='/search' element={<Search/>} />
-       <Route path='/*' element={<Navigate to="/" />} />
+       <Route path='*' element={<Trending/>} />
      </Routes>
     </Container>
     </div>
