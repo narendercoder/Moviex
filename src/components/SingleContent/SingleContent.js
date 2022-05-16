@@ -12,8 +12,9 @@ const SingleContent = ({
   vote_average,
 }) => {
   return (
-    <ContentModal media_type={media_type} id={id}>
+    <ContentModal media_type={media_type} id={id}  >
       <Badge
+      overlap="rectangular"
         badgeContent={vote_average}
         color={vote_average > 6 ? "primary" : "secondary"}
       />
