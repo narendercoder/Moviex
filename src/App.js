@@ -1,4 +1,3 @@
-
 import React from 'react'
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
 import Header from './component/Header/Header';
@@ -21,7 +20,7 @@ function App() {
        <Route path='/movies' element={<Movies/>} />
        <Route path='/series' element={<Series/>} />
        <Route path='/search' element={<Search/>} />
-       <Route path='*' element={<Navigate to="/" />} />
+       <Route path='/*' element={<Navigate to="/" />} />
      </Routes>
     </Container>
     </div>

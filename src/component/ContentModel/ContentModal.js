@@ -3,15 +3,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Button } from "@material-ui/core";
+import { Button, IconButton } from "@material-ui/core";
 import YoutubeIcon from "@material-ui/icons/YouTube";
-import "./ContentModal.css"
+import "./ContentModal.css";
+import CloseIcon from "@material-ui/icons/Close";
 import {
   img_500,
   unavailable,
   unavailableLandscape,
 } from "../../config/config";
 import Carousel from "./Carousel/Carousel";
+import { findByLabelText } from "@testing-library/react";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -26,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(1, 1, 3),
-
   },
 }));
 
@@ -50,8 +51,7 @@ export default function ContentModal({ children, media_type, id }) {
       const res = await fetch(url);
       const data = await res.json();
       setContent(data);
-    } 
-    catch(error) {
+    } catch (error) {
       console.log(error);
     }
   };
@@ -61,8 +61,7 @@ export default function ContentModal({ children, media_type, id }) {
       const res = await fetch(url);
       const data = await res.json();
       setVideo(data.results[0]?.key);
-    }
-    catch(error){
+    } catch (error) {
       console.log(error);
     }
   };
@@ -73,7 +72,6 @@ export default function ContentModal({ children, media_type, id }) {
     // eslint-disable-next-line
   }, []);
 
- 
   return (
     <>
       <div
@@ -118,21 +116,27 @@ export default function ContentModal({ children, media_type, id }) {
                   alt={content.name || content.title}
                   className="ContentModal__landscape"
                 />
+
                 <div className="ContentModal__about">
+                <div className="ContentModal__icon">
+                    <IconButton onClick={handleClose}>
+                    <CloseIcon fontSize="large" style={{ color: "white" }} />
+                    </IconButton>
+                  </div>
                   <div className="ContentModal__title">
                     <h1>{content.name || content.title}</h1>
-                    <span className="year">(
-                    {(
-                      content.first_air_date ||
-                      content.release_date ||
-                      "-----"
-                    ).substring(0, 4)}
-                    )</span> 
+                    <span className="year">
+                      (
+                      {(
+                        content.first_air_date ||
+                        content.release_date ||
+                        "-----"
+                      ).substring(0, 4)}
+                      )
+                    </span>
                   </div>
                   <div className="tagline">
-                  {content.tagline && (
-                    <i>{content.tagline}</i>
-                  )}
+                    {content.tagline && <i>{content.tagline}</i>}
                   </div>
                   <span className="ContentModal__description">
                     {content.overview}

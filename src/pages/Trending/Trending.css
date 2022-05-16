@@ -24,6 +24,7 @@
   }
 .trending{
     display: flex;
-    padding: 0px 5vw;
+    justify-content: center;
+    padding: 0px 1vw;
     flex-wrap: wrap;
 }

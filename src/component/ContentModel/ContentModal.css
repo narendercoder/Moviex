@@ -1,9 +1,11 @@
 .ContentModal__landscape{
+    position: relative;
     display: flex;
     object-fit: contain;
     border-radius: 10px;
 }
 .ContentModal__Portrait{
+    position: relative;
     display: flex;
     object-fit: contain;
     border-radius: 10px;
@@ -42,6 +44,18 @@
      font-weight: 300;
 
 }
+.ContentModal__icon{
+    position: absolute;
+    width: 95%;
+    top: 0%;
+    right: 2.5%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    justify-content: flex-end;
+    
+}
 .ContentModal__title{
     position: relative;
     height: 12%;
@@ -74,15 +88,15 @@
         
     }
     .ContentModal__title{
-        padding: 40px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         text-align: left;
         font-size: 1rem;
     }
     .tagline{
-        padding-top: 50px;
+        padding-top: 10px;
         position: relative;
         font-size: 1.5rem;
     }
