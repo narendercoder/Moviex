@@ -13,7 +13,6 @@ import {
   unavailableLandscape,
 } from "../../config/config";
 import Carousel from "./Carousel/Carousel";
-import { findByLabelText } from "@testing-library/react";
 
 const useStyles = makeStyles((theme) => ({
   modal: {

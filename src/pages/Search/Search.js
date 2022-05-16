@@ -8,8 +8,8 @@ import {
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
-import CustomPagination from "../../component/Pagination/CustomPagination";
-import SingleContent from "../../component/SingleContent/SingleContent";
+import CustomPagination from "../../components/Pagination/CustomPagination";
+import SingleContent from "../../components/SingleContent/SingleContent";
 function Search() {
   const [type, setType] = useState(0);
   const [page, setPage] = useState(1);

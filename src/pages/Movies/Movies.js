@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Genres from "../../component/Genres";
-import CustomPagination from "../../component/Pagination/CustomPagination";
-import SingleContent from "../../component/SingleContent/SingleContent";
+import Genres from "../../components/Genres";
+import CustomPagination from "../../components/Pagination/CustomPagination";
+import SingleContent from "../../components/SingleContent/SingleContent";
 import useGenre from "../../hooks/useGenre";
 function Movies() {
   const [page, setPage] = useState(1);

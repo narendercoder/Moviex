@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CustomPagination from "../../component/Pagination/CustomPagination";
-import SingleContent from "../../component/SingleContent/SingleContent";
+import CustomPagination from "../../components/Pagination/CustomPagination";
+import SingleContent from "../../components/SingleContent/SingleContent";
 import "./Trending.css";
 
 function Trending() {
